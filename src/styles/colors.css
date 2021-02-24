@@ -1,0 +1,37 @@
+.aqua { color: #00d4ff; }
+.sky-blue { color: #42c2f5; }
+.blue { color: #4287f5; }
+.teal { color: #36ad95;}
+.purple { color: #635bff;}
+.magenta { color: #e622d5;}
+.grass { color: #7ed938; }
+.green { color: #19A974; }
+.hot-pink { color: #ff216f; }
+.rose { color: #f54242; }
+.orange { color: #e35a10; }
+.tangerine { color: #f08018; }
+.yellow { color: #f0b618; }
+.midnight { color: #0a2540; }
+
+.bg-aqua { background-color: #00d4ff; }
+.bg-sky-blue { background-color: #42c2f5; }
+.bg-blue { background-color: #4287f5; }
+.bg-teal { background-color: #36ad95; }
+.bg-purple { background-color: #635bff; }
+.bg-magenta { background-color: #e622d5; }
+.bg-grass { background-color: #7ed938; }
+.bg-green { background-color: #19A974; }
+.bg-hot-pink { background-color: #ff216f; }
+.bg-rose { background-color: #f54242; }
+.bg-orange { background-color: #e35a10; }
+.bg-tangerine { background-color: #f08018; }
+.bg-yellow { background-color: #f0b618; }
+.bg-midnight { background-color: #0a2540; }
+
+.bg-spectrum {
+  background:
+      linear-gradient(#112b4f, transparent),
+      linear-gradient(to top left, #3f0f91, transparent),
+      linear-gradient(to top right, #0f1235, transparent);
+  background-blend-mode: screen;
+}

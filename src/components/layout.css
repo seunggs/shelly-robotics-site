@@ -1,0 +1,12 @@
+@import "../styles/typography.css";
+
+body {
+  color: hsla(0, 0%, 0%, 0.8);
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+}
+
+.content {
+  font-size: 1.15rem;
+}
