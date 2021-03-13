@@ -17,7 +17,22 @@ export default function Demo() {
     return (
       <div className={`border-${borderStyle} border-l-${borderWidth} border-${borderColor} pl-4`}>
         <div>{children}</div>
-        <p className="text-sm italic text-gray-500 mt-3">{caption}</p>
+        {caption && <p className="text-sm italic text-gray-500 mt-3">{caption}</p>}
+      </div>
+    )
+  }
+
+  const SmImageWrapper = ({
+    to = '#',
+    width = '160px',
+    caption = '',
+    className = '',
+    children,
+  }) => {
+    return (
+      <div className={`rounded-md max-w-full overflow-hidden cursor-pointer hover:opacity-75 transition-all duration-300 ${className}`} style={{ width }} onClick={() => scrollTo(to)}>
+        <div>{children}</div>
+        {caption && <p className="text-sm italic text-gray-500 mt-3">{caption}</p>}
       </div>
     )
   }
@@ -50,7 +65,7 @@ export default function Demo() {
         {/* What we do */}
         <div className="mx-4 md:mx-12">
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-24 mb-12 p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-16 mb-12 p-8 md:p-12">
               <div className="md:col-span-12">
                 <Headline>What We Do</Headline>
                 <div className="text-2xl text-gray-500">🤖&nbsp;&nbsp;End-to-end AI robotics for warehouse pick & pack (to begin with)</div>
@@ -90,6 +105,7 @@ export default function Demo() {
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Lab2real transfer problem: as soon as the robot is operating in an unstructured real world, it fails.</li>
                           <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to vagaries of the real world.</li>
+                          <li className="mb-3">1 robot can replace ~3 people</li>
                         </ul>
                         <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#generalization')}>Learn more &rarr;</a>
                       </div>}
@@ -124,6 +140,9 @@ export default function Demo() {
                           <li className="mb-3">This makes our model scale much better - which was key to the most successful AI systems in the last few years</li>
                         </ul>
                         <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#cheap-data')}>Learn more &rarr;</a>
+                        <SmImageWrapper to="#play-data-example" className="mt-5">
+                          <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
+                        </SmImageWrapper>
                       </div>}
                     />
                   </div>
@@ -156,6 +175,9 @@ export default function Demo() {
                           <li className="mb-3">Get to market quickly with ~85-90% accuracy + teleoperation to handle difficult edge cases</li>
                         </ul>
                         <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#teleoperation')}>Learn more &rarr;</a>
+                        <SmImageWrapper to="#demo" className="mt-5">
+                          <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
+                        </SmImageWrapper>
                       </div>}
                     />
                   </div>
@@ -168,12 +190,12 @@ export default function Demo() {
         {/* end: Thesis */}
 
         {/* Demo */}
-        <div className="bg-blue-50 mx-4 md:mx-12">
+        <div id="demo" className="bg-blue-50 mx-4 md:mx-12">
           <div className="container mx-auto text-gray-500">
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="text-blue-800">Demo</Headline>
+                <Headline color="blue-800">Demo</Headline>
                 <p className="italic mb-6">*** This demo is not real (yet) - we're still building out a working demo with a real robot</p>
               </div>
               <div className="md:col-span-8">
@@ -231,7 +253,7 @@ export default function Demo() {
                     <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
                   </ImageWrapper>
 
-                  <div id="play-example" className="mt-12">
+                  <div id="play-data-example" className="mt-12">
                     <Headline size="md">Example data collection</Headline>
                     <div className="mb-6">
                       <div>Show video and states</div>
@@ -273,7 +295,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="text-purple-800">Generalize to many tasks before specializing</Headline>
+                <Headline color="purple-800">Generalize to many tasks before specializing</Headline>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
@@ -351,7 +373,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="text-pink-800">Cheap & rich data<br />(scalable)</Headline>
+                <Headline color="pink-800">Cheap & rich data<br />(scalable)</Headline>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
@@ -374,7 +396,7 @@ export default function Demo() {
                       headingColor="pink-500"
                       textColor="pink-700"
                       heading="Our approach"
-                      text={<span>Play data is cheap (<a className="cursor-pointer underline hover:text-pink-800 transition-all duration-150" onClick={() => scrollTo('#play-example')}>here's an example</a>)</span>}
+                      text={<span>Play data is cheap (<a className="cursor-pointer underline hover:text-pink-800 transition-all duration-150" onClick={() => scrollTo('#play-data-example')}>here's an example</a>)</span>}
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Expert demonstration needs to be carefully set up, executed, and "reset", which are very time consuming</li>
@@ -428,7 +450,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="text-red-800">VR teleoperation</Headline>
+                <Headline color="red-800">VR teleoperation</Headline>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
@@ -534,7 +556,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="text-gray-800">Next steps</Headline>
+                <Headline color="gray-800">Next steps <span className="ml-2">☕</span></Headline>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
