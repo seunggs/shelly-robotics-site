@@ -35,10 +35,10 @@ export default function Demo() {
     className = '',
   }) => {
     return (
-      <div className={`border-${borderStyle} border-l-${borderWidth} border-${borderColor} ${size === 'sm' ? 'pl-3' : 'pl-6'} ${className}`}>
+      <div className={`border-${borderStyle} border-l-${borderWidth} border-${borderColor} ${size === 'sm' ? 'pl-3' : 'pl-6'} pr-8 ${className}`}>
         {heading && <div className={`${size === 'sm' ? 'text-md' : 'text-xl'} text-${headingColor} ${size === 'sm' ? 'mb-1' : 'mb-2'}`}>{heading}</div>}
         {text && <div className={`${size === 'sm' ? 'text-lg' : 'text-2xl'} text-${textColor}`}>{text}</div>}
-        {subtext && <div className="text-sm text-gray-500 mt-4">{subtext}</div>}
+        {subtext && <div className="text-gray-500 mt-4">{subtext}</div>}
       </div>
     )
   }
@@ -87,8 +87,10 @@ export default function Demo() {
                       heading="Our approach"
                       text="Generalize to many tasks before specializing"
                       subtext={<div>
-                        <p className="mb-3">One of the biggest problems in AI robotics is lab2real transfer. As soon as the robot is operating in an unstructured, unpredictable real world, it fails.</p>
-                        <p className="mb-3">Our model trains for generalization before specialization which makes it much more robust to vagaries of the real world.</p>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Lab2real transfer problem: as soon as the robot is operating in an unstructured real world, it fails.</li>
+                          <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to vagaries of the real world.</li>
+                        </ul>
                         <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#generalization')}>Learn more &rarr;</a>
                       </div>}
                     />
@@ -116,9 +118,11 @@ export default function Demo() {
                       heading="Our approach"
                       text="Cheap & rich data (scalable)"
                       subtext={<div>
-                        <p className="mb-3">Robotics requires a lot of data to work well in the real world, but robot data is typically very expensive (i.e. expert demonstration) or not rich enough (i.e. scripted or random).</p>
-                        <p className="mb-3">Our model uses human "play" data in VR, which is rich, but doesn't require expert demonstration or labelling. This makes it easy to collect large-scale data at a fraction of the cost and allows for much better scaling.</p>
-                        <p className="mb-3">We think this scalability is key to future AI systems. The greatest success in practical AI in the past few years (i.e. AlphaStar, GPT-3) has been due to large scaling of data and compute.</p>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Robotics requires a lot of data - but robot data is expensive</li>
+                          <li className="mb-3">We use human "play" data, which is cheap because it doesn't require expert demonstration or labelling</li>
+                          <li className="mb-3">This makes our model scale much better - which was key to the most successful AI systems in the last few years</li>
+                        </ul>
                         <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#cheap-data')}>Learn more &rarr;</a>
                       </div>}
                     />
@@ -146,9 +150,11 @@ export default function Demo() {
                       heading="Our approach"
                       text="VR teleoperation to handle edge cases"
                       subtext={<div>
-                        <p className="mb-2">Production deployment typically requires very low error rate.</p>
-                        <p className="mb-2">We aim to get to market with ~85-90% accuracy and handle all remaining edge cases through human teleoperation (and add them to our training data at the same time!).</p>
-                        <p className="mb-3">We're aiming to make the VR teleoperation as intuitive as consumer devices like iPhone and Oculus Quest.</p>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Production deployment requires very low error rate</li>
+                          <li className="mb-3">This requirement dramatically slows time to market</li>
+                          <li className="mb-3">Get to market quickly with ~85-90% accuracy + teleoperation to handle difficult edge cases</li>
+                        </ul>
                         <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#teleoperation')}>Learn more &rarr;</a>
                       </div>}
                     />
@@ -187,7 +193,7 @@ export default function Demo() {
                         textColor="blue-700"
                         heading="Model"
                         text="Task-agnostic unsupervised architecture"
-                        className="pr-8 mb-4"
+                        className="mb-4"
                       />
                     </div>
                     <div className="md:col-span-1">
@@ -199,7 +205,7 @@ export default function Demo() {
                         textColor="blue-700"
                         heading="Training"
                         text="End-to-end learning from raw pixels"
-                        className="pr-8 mb-4"
+                        className="mb-4"
                       />
                     </div>
                     <div className="md:col-span-1">
@@ -211,7 +217,7 @@ export default function Demo() {
                         textColor="blue-700"
                         heading="Data"
                         text="Cheap, unlabelled, non-expert VR demonstration data"
-                        className="pr-8 mb-4"
+                        className="mb-4"
                       />
                     </div>
                   </div>
@@ -291,9 +297,12 @@ export default function Demo() {
                       textColor="purple-700"
                       heading="Our approach"
                       text="1 robot replaces ~3 people"
-                      subtext={<div className="text-base">
-                        <p className="mb-3">Robots now only replace a fraction of a person because they can only do a very specific task - for example, Kiva bots that move shelves around.</p>
-                        <p>With a more general capability, our robot aims to replace a picker entirely. Since a robot can take all 3 full-time shifts in a day, it can replace 3 people.</p>
+                      subtext={<div>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Robots can only replace a fraction of a person at the moment because they can only do a very specific task - for example, Kiva bots that move shelves around</li>
+                          <li className="mb-3">With a more generalized capability, our robot will replace a picker entirely</li>
+                          <li className="mb-3">Since a robot can take all 3 full-time shifts in a day, it can replace 3 people</li>
+                        </ul>
                       </div>}
                     />
                   </div>
@@ -318,10 +327,12 @@ export default function Demo() {
                       textColor="purple-700"
                       heading="Our approach"
                       text="Robots that work in the real world"
-                      subtext={<div className="text-base">
-                        <p className="mb-3">Training specifically for a very narrow task is one of the main causes of failure in the real world.</p>
-                        <p className="mb-3">Even a seemingly simple task like picking seems to require a wide range of skills that we humans take for granted.</p>
-                        <p>It might seem counterintuitive to train on multiple tasks unrelated to the specific task we want to accomplish, but the latest research suggests this approach makes robots far more robust to the vagaries of the real world.</p>
+                      subtext={<div>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Robots don't work in the real world because it's trained on a highly structured lab environment</li>
+                          <li className="mb-3">Even a seemingly simple task like picking requires a wide range of skills that we humans take for granted</li>
+                          <li className="mb-3">It might seem counterintuitive to train on multiple tasks unrelated to the specific task we want to accomplish, but the latest research suggests this approach makes robots far more robust to the vagaries of the real world</li>
+                        </ul>
                       </div>}
                     />
                   </div>
@@ -364,11 +375,11 @@ export default function Demo() {
                       textColor="pink-700"
                       heading="Our approach"
                       text={<span>Play data is cheap (<a className="cursor-pointer underline hover:text-pink-800 transition-all duration-150" onClick={() => scrollTo('#play-example')}>here's an example</a>)</span>}
-                      subtext={<div className="text-base">
-                        <p className="mb-3">Expert demonstration needs to be carefully set up, executed, and requires a "reset", which are very time consuming.</p>
-                        <p className="mb-3">It is also not robust - for example, a task of opening a drawer will fail if the demonstration was done by holding the top of the handle, but the task requires holding the bottom of the handle.</p>
-                        <p className="mb-3">With "play" data, on the other hand, a human demonstrator simply interacts with the environment, using his/her own common sense and curiosity. This requires no setup, supervision, or reset and is very cheap to collect.</p>
-                        <p>Play data is also a lot more robust as boredom will force human demonstrators to try varied actions for the same task.</p>
+                      subtext={<div>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Expert demonstration needs to be carefully set up, executed, and "reset", which are very time consuming</li>
+                          <li className="mb-3">With "play" data, on the other hand, a human demonstrator simply interacts with the environment, using his/her own common sense and curiosity. This requires no setup, supervision, or reset and is very cheap to collect</li>
+                        </ul>
                       </div>}
                     />
                   </div>
@@ -393,10 +404,12 @@ export default function Demo() {
                       textColor="pink-700"
                       heading="Our approach"
                       text="Play data is rich"
-                      subtext={<div className="text-base">
-                        <p className="mb-3">Scripted/random data is cheap to produce.</p>
-                        <p className="mb-3">But they're not rich enough to be useful. Imagine a robot randomly trying things - there's very little chance it'll grab a block and place it on top of another block by chance.</p>
-                        <p>Play data uses human's common sense and innate curiosity, creating a much richer data. In essence, it allows us to bipass the difficult problem of rich exploration.</p>
+                      subtext={<div>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Scripted/random data is cheap but not rich enough to be useful; imagine a robot randomly flailing about - there's very little chance it'll do anything really useful for humans</li>
+                          <li className="mb-3">Play data uses human's common sense and innate curiosity, creating a much richer data</li>
+                          <li className="mb-3">It allows us to bipass the difficult problem of exploration</li>
+                        </ul>
                       </div>}
                     />
                   </div>
@@ -439,9 +452,11 @@ export default function Demo() {
                       textColor="red-700"
                       heading="Our approach"
                       text="Fast to market: >85% accuracy + teleoperation"
-                      subtext={<div className="text-base">
-                        <p className="mb-3">Clients require a very low error rate for deployment in a production environment.</p>
-                        <p>By using VR teleoperation, we can have a nearly 100% reliable system with much lower model accuracy. Humans can handle the difficult edge cases.</p>
+                      subtext={<div>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Clients require a very low error rate for deployment to production</li>
+                          <li className="mb-3">By using VR teleoperation, we can have a nearly 100% reliable system with much lower model accuracy - humans can handle the difficult edge cases</li>
+                        </ul>
                       </div>}
                     />
                   </div>
@@ -466,9 +481,11 @@ export default function Demo() {
                       textColor="red-700"
                       heading="Our approach"
                       text="Insanely great teleoperation experience via VR"
-                      subtext={<div className="text-base">
-                        <p className="mb-3">Teleoperation is still pretty painful.</p>
-                        <p className="mb-3">Using VR and a robot with a smooth head movement, we aim to create a consumer-level UX for teleoperation - like iPhone or Oculus Quest.</p>
+                      subtext={<div>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Teleoperation is still pretty painful</li>
+                          <li className="mb-3">Using VR and a robot with a smooth head movement, we aim to create a consumer-level UX for teleoperation - like iPhone or Oculus Quest</li>
+                        </ul>
                       </div>}
                     />
                   </div>
@@ -493,10 +510,12 @@ export default function Demo() {
                       textColor="red-700"
                       heading="Our approach"
                       text="High quality, real world data collection via teleoperation"
-                      subtext={<div className="text-base">
-                        <p className="mb-3">Right now, subpar teleoperation UX makes it difficult to collect quality data.</p>
-                        <p className="mb-3">With far more optimized teleoperatione experience, we can not only collect high quality data in training, but also failure edge cases in production environment.</p>
-                        <p>This should make our models much more robust in the future as we accumulate more and more real world data.</p>
+                      subtext={<div>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Right now, subpar teleoperation UX makes it difficult to collect quality data</li>
+                          <li className="mb-3">With more optimized teleoperation experience, we can not only collect high quality data in training, but also failure edge cases in production</li>
+                          <li className="mb-3">This should make our models much more robust as we accumulate more and more real world data</li>
+                        </ul>
                       </div>}
                     />
                   </div>
@@ -530,8 +549,11 @@ export default function Demo() {
                       heading="Model"
                       text="Real robot testing and model scaling"
                       subtext={<div className="text-lg">
-                        <p className="mb-3">We're waiting on the delivery of the Reachy robot. As soon as we get it, we'll be generating play data and testing our model.</p>
-                        <p>Once we get a baseline accuracy/robustness, we'll expand the number of environments and dataset size to test our "generalization before specialization" hypothesis.</p>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">We're waiting on the delivery of the Reachy robot</li>
+                          <li className="mb-3">As soon as we get it, we'll be generating play data and testing our model</li>
+                          <li className="mb-3">Once we get a baseline accuracy/robustness, we'll expand environments and dataset size to get to production level performance</li>
+                        </ul>
                       </div>}
                       className="pr-8"
                     />
@@ -543,9 +565,14 @@ export default function Demo() {
                       headingColor="indigo-500"
                       textColor="indigo-700"
                       heading="Teleoperation"
-                      text="VR teleoperation UX improvement"
+                      text="VR teleoperation UX improvements"
                       subtext={<div className="text-lg">
-                        <p className="mb-3">We'll also start our work on improving the teleoperation UX, possibly with hardware responsiveness improvements as well as UX/software tweaks.</p>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">We'll also start our work on improving the teleoperation UX</li>
+                          <li className="mb-3">Increase responsiveness via software/networking optimizations</li>
+                          <li className="mb-3">Improve robot morphology to more closely match a human for better experience</li>
+                          <li className="mb-3">Add tactile sensors and feedback</li>
+                        </ul>
                       </div>}
                       className="pr-8"
                     />
