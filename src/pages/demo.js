@@ -518,7 +518,7 @@ export default function Demo() {
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Teleoperation is still pretty painful</li>
-                          <li className="mb-3">Using VR and a robot with a smooth head movement, we aim to create a consumer-level UX for teleoperation - like iPhone or Oculus Quest</li>
+                          <li className="mb-3">Using VR and a responsive robot with a smooth head movement, we aim to create a consumer-level UX for teleoperation - like iPhone or Oculus Quest</li>
                         </ul>
                       </div>}
                     />
