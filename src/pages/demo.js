@@ -99,15 +99,17 @@ export default function Demo() {
                       borderColor="blue-300"
                       headingColor="blue-500"
                       textColor="blue-700"
-                      heading="Our approach"
+                      heading="Our approach 👍"
                       text="Generalize to many tasks before specializing"
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Lab2real transfer problem: as soon as the robot is operating in an unstructured real world, it fails</li>
-                          <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to vagaries of the real world</li>
+                          <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to the vagaries of the real world</li>
                           <li className="mb-3">1 robot can replace ~3 people</li>
                         </ul>
-                        <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#generalization')}>Learn more &rarr;</a>
+                        <div className="mt-5">
+                          <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#generalization')}>Learn more &rarr;</a>
+                        </div>
                       </div>}
                     />
                   </div>
@@ -131,7 +133,7 @@ export default function Demo() {
                       borderColor="indigo-300"
                       headingColor="indigo-500"
                       textColor="indigo-700"
-                      heading="Our approach"
+                      heading="Our approach 👍"
                       text="Cheap & rich data (scalable)"
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
@@ -139,8 +141,10 @@ export default function Demo() {
                           <li className="mb-3">We use human "play" data, which is cheap because it doesn't require expert demonstration or labelling</li>
                           <li className="mb-3">This makes our model scale much better - which was key to the most successful AI systems in the last few years</li>
                         </ul>
-                        <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#cheap-data')}>Learn more &rarr;</a>
-                        <SmImageWrapper to="#play-data-example" className="mt-5">
+                        <div className="mt-5">
+                          <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#cheap-data')}>Learn more &rarr;</a>
+                        </div>
+                        <SmImageWrapper to="#play-data-example" className="mt-8">
                           <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
                         </SmImageWrapper>
                       </div>}
@@ -166,7 +170,7 @@ export default function Demo() {
                       borderColor="pink-300"
                       headingColor="pink-500"
                       textColor="pink-700"
-                      heading="Our approach"
+                      heading="Our approach 👍"
                       text="VR teleoperation to handle edge cases"
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
@@ -174,8 +178,10 @@ export default function Demo() {
                           <li className="mb-3">This requirement dramatically slows time to market</li>
                           <li className="mb-3">Get to market quickly with ~85-90% accuracy + teleoperation to handle difficult edge cases</li>
                         </ul>
-                        <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#teleoperation')}>Learn more &rarr;</a>
-                        <SmImageWrapper to="#demo" className="mt-5">
+                        <div className="mt-5">
+                          <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#teleoperation')}>Learn more &rarr;</a>
+                        </div>
+                        <SmImageWrapper to="#demo" className="mt-8">
                           <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
                         </SmImageWrapper>
                       </div>}
@@ -260,10 +266,11 @@ export default function Demo() {
                     </div>
                   </div>
 
-                  <div className="mt-12">
+                  <div id="research-results" className="mt-12">
                     <Headline size="md">Research results</Headline>
                     <ul className="list-disc list-outside pl-5 mb-6">
                       <li className="mb-2">The original paper our core model is based on shows ~70% ± 10% success rate over 3 seeded experiments on 18 zero-shot tasks based on <u>just 3 hours of play data</u>.</li>
+                      <li className="mb-2">Crucially, the model shows high robustness to variations in initial conditions - suggesting better lab2real transfer.</li>
                       <li className="mb-2">We have multiple improvements on our pipeline for testing, but believe that simple scaling of model and dataset will get us very close to the target accuracy of 85-90%.</li>
                       <li className="mb-2">We plan to test both accuracy and robustness to varying intial conditions by <u>expanding the variety of environments</u> and collecting a <u>considerably larger dataset (~5-10x) via crowdsourcing</u>.</li>
                     </ul>
