@@ -19,7 +19,7 @@ export default function Home() {
           {/* hero */}
           <div className="col-span-12 text-center text-white h-full">
             <div className="h-full flex flex-col justify-center" style={{ marginTop: '-100px' }}>
-              <Headline size="xl" className="mb-7 font-medium">Shelly Robotics</Headline>
+              <Headline size="xl" color="white" className="mb-7 font-medium">Shelly Robotics</Headline>
 
               <div className="opacity-70">
                 <p className="text-2xl mb-2">End-to-end AI robotics for warehouse pick and pack</p>
