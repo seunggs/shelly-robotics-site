@@ -144,7 +144,7 @@ export default function Demo() {
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Robotics requires a lot of data - but robot data is expensive</li>
                           <li className="mb-3">We use human "play" data, which is cheap because it doesn't require expert demonstration or labelling</li>
-                          <li className="mb-3">This makes our model scale much better - and scaling was key to the most successful AI systems in the last few years</li>
+                          <li className="mb-3">This makes our model scale much better - and scaling has been key to the most successful AI systems in the last few years</li>
                         </ul>
                         <div className="mt-5">
                           <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#cheap-data')}>Learn more &rarr;</a>
