@@ -103,8 +103,8 @@ export default function Demo() {
                       text="Generalize to many tasks before specializing"
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
-                          <li className="mb-3">Lab2real transfer problem: as soon as the robot is operating in an unstructured real world, it fails.</li>
-                          <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to vagaries of the real world.</li>
+                          <li className="mb-3">Lab2real transfer problem: as soon as the robot is operating in an unstructured real world, it fails</li>
+                          <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to vagaries of the real world</li>
                           <li className="mb-3">1 robot can replace ~3 people</li>
                         </ul>
                         <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#generalization')}>Learn more &rarr;</a>
