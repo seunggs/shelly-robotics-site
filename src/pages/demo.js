@@ -5,6 +5,7 @@ import Headline from '../components/Headline'
 import Content from '../components/Content'
 import { StaticImage } from "gatsby-plugin-image"
 import scrollTo from 'gatsby-plugin-smoothscroll'
+import { ImPlay2 } from '@react-icons/all-files/im/ImPlay2'
 
 export default function Demo() {
   const ImageWrapper = ({
@@ -24,6 +25,7 @@ export default function Demo() {
 
   const SmImageWrapper = ({
     to = '#',
+    playButton = false,
     width = '160px',
     caption = '',
     className = '',
@@ -31,7 +33,10 @@ export default function Demo() {
   }) => {
     return (
       <div className={`rounded-md max-w-full overflow-hidden cursor-pointer hover:opacity-75 transition-all duration-300 ${className}`} style={{ width }} onClick={() => scrollTo(to)}>
+        <div className="relative">
+          {playButton && <div className="absolute z-10 top-0 right-0 bottom-0 left-0 flex flex-row justify-center items-center"><ImPlay2 style={{ fontSize: '3rem', color: 'rgba(255,255,255,0.7)' }} /></div>}
         <div>{children}</div>
+        </div>
         {caption && <p className="text-sm italic text-gray-500 mt-3">{caption}</p>}
       </div>
     )
@@ -105,7 +110,7 @@ export default function Demo() {
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Lab2real transfer problem: as soon as the robot is operating in an unstructured real world, it fails</li>
                           <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to the vagaries of the real world</li>
-                          <li className="mb-3">1 robot can replace ~3 people</li>
+                          <li className="mb-3">Because of more general capability, 1 robot can now replace ~3 people instead of a fraction of a person</li>
                         </ul>
                         <div className="mt-5">
                           <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#generalization')}>Learn more &rarr;</a>
@@ -144,7 +149,7 @@ export default function Demo() {
                         <div className="mt-5">
                           <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#cheap-data')}>Learn more &rarr;</a>
                         </div>
-                        <SmImageWrapper to="#play-data-example" className="mt-8">
+                        <SmImageWrapper to="#play-data-example" playButton={true} className="mt-8">
                           <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
                         </SmImageWrapper>
                       </div>}
