@@ -7,6 +7,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 export default function Demo() {
+  const getLeftBorderClassName = ({ borderStyle, borderWidth, borderColor }) => `border-${borderStyle} border-l-${borderWidth} border-${borderColor}`
+  const getTextColorClassName = ({ color }) => `text-${color}`
+
   const ImageWrapper = ({
     borderStyle = 'solid',
     borderWidth = 2,
@@ -14,7 +17,7 @@ export default function Demo() {
     caption = '',
     children,
   }) => {
-    const borderClassName = `border-l-${borderWidth} border-${borderColor} border-${borderStyle}`
+    const borderClassName = getLeftBorderClassName({ borderStyle, borderWidth, borderColor})
     return (
       <div className={`${borderClassName} pl-4`}>
         <div>{children}</div>
@@ -35,9 +38,9 @@ export default function Demo() {
     subtext,
     className = '',
   }) => {
-    const borderClassName = `border-l-${borderWidth} border-${borderColor} border-${borderStyle}`
-    const headingColorClassName = `text-${headingColor}`
-    const textColorClassName = `text-${textColor}`
+    const borderClassName = getLeftBorderClassName({ borderStyle, borderWidth, borderColor})
+    const headingColorClassName = getTextColorClassName(headingColor)
+    const textColorClassName = getTextColorClassName(textColor)
     return (
       <div className={`${borderClassName} ${size === 'sm' ? 'pl-3' : 'pl-6'} ${className}`}>
         {heading && <div className={`${size === 'sm' ? 'text-md' : 'text-xl'} ${headingColorClassName} ${size === 'sm' ? 'mb-1' : 'mb-2'}`}>{heading}</div>}
@@ -171,7 +174,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="blue-800">Demo</Headline>
+                <Headline color="text-blue-800">Demo</Headline>
                 <p className="italic mb-6">*** This demo is not real (yet) - we're still building out a working demo with a real robot</p>
               </div>
               <div className="md:col-span-8">
@@ -271,7 +274,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="purple-800">Generalize to many tasks before specializing</Headline>
+                <Headline color="text-purple-800">Generalize to many tasks before specializing</Headline>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
@@ -344,7 +347,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="pink-800">Cheap & rich data<br />(scalable)</Headline>
+                <Headline color="text-pink-800">Cheap & rich data<br />(scalable)</Headline>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
@@ -419,7 +422,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="red-800">VR teleoperation</Headline>
+                <Headline color="text-red-800">VR teleoperation</Headline>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
@@ -519,7 +522,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="gray-800">Next steps</Headline>
+                <Headline color="text-gray-800">Next steps</Headline>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
