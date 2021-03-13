@@ -13,12 +13,15 @@ export default function Demo() {
     borderColor = 'gray-300',
     caption = '',
     children,
-  }) => (
-    <div className={`border-l-${borderWidth} border-${borderColor} border-${borderStyle} pl-4`}>
-      <div>{children}</div>
-      <p className="text-sm italic text-gray-500 mt-3">{caption}</p>
-    </div>
-  )
+  }) => {
+    const borderClassName = `border-l-${borderWidth} border-${borderColor} border-${borderStyle}`
+    return (
+      <div className={`${borderClassName} pl-4`}>
+        <div>{children}</div>
+        <p className="text-sm italic text-gray-500 mt-3">{caption}</p>
+      </div>
+    )
+  }
 
   const TextBlock = ({
     size = 'md', // 'sm' or 'md'
@@ -31,13 +34,18 @@ export default function Demo() {
     text,
     subtext,
     className = '',
-  }) => (
-    <div className={`border-l-${borderWidth} border-${borderColor} border-${borderStyle} ${size === 'sm' ? 'pl-3' : 'pl-6'} ${className}`}>
-      {heading && <div className={`${size === 'sm' ? 'text-md' : 'text-xl'} text-${headingColor} ${size === 'sm' ? 'mb-1' : 'mb-2'}`}>{heading}</div>}
-      {text && <div className={`${size === 'sm' ? 'text-lg' : 'text-2xl'} text-${textColor}`}>{text}</div>}
-      {subtext && <div className="text-sm text-gray-500 mt-4">{subtext}</div>}
-    </div>
-  )
+  }) => {
+    const borderClassName = `border-l-${borderWidth} border-${borderColor} border-${borderStyle}`
+    const headingColorClassName = `text-${headingColor}`
+    const textColorClassName = `text-${textColor}`
+    return (
+      <div className={`${borderClassName} ${size === 'sm' ? 'pl-3' : 'pl-6'} ${className}`}>
+        {heading && <div className={`${size === 'sm' ? 'text-md' : 'text-xl'} ${headingColorClassName} ${size === 'sm' ? 'mb-1' : 'mb-2'}`}>{heading}</div>}
+        {text && <div className={`${size === 'sm' ? 'text-lg' : 'text-2xl'} ${textColorClassName}`}>{text}</div>}
+        {subtext && <div className="text-sm text-gray-500 mt-4">{subtext}</div>}
+      </div>
+    )
+  }
 
   return (
     <div>
@@ -294,7 +302,7 @@ export default function Demo() {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-12 mt-12">
                   <div className="md:col-span-1">
                     <div className="text-5xl font-semibold text-purple-500 mb-5">2.</div>
@@ -369,7 +377,7 @@ export default function Demo() {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-12 mt-12">
                   <div className="md:col-span-1">
                     <div className="text-5xl font-semibold text-pink-500 mb-5">2.</div>
@@ -442,7 +450,7 @@ export default function Demo() {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-12 mt-12">
                   <div className="md:col-span-1">
                     <div className="text-5xl font-semibold text-red-500 mb-5">2.</div>
@@ -547,7 +555,7 @@ export default function Demo() {
                     />
                   </div>
                 </div>
-                
+
               </div>
 
             </div>

@@ -15,9 +15,11 @@ const Headline = ({
     xl: 'text-5xl leading-10',
   }
   const sizeClassName = sizeMap[size]
+  const textColorClassName = `text-${color}`
+  const fontWeightClassName = `font-${weight}`
 
   return (
-    <h2 className={`text-${color} font-${weight} ${sizeClassName} ${className}`} style={style}>{children}</h2>
+    <h2 className={`${textColorClassName} ${fontWeightClassName} ${sizeClassName} ${className}`} style={style}>{children}</h2>
   )
 }
 
