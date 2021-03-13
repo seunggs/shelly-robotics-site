@@ -1,16 +1,23 @@
 import React from 'react'
 
-const Headline = ({ children, size = 'lg', className = 'mb-5 font-medium' }) => {
+const Headline = ({
+  size = 'lg',
+  color = 'gray-900',
+  weight = 'medium',
+  className = 'mb-3',
+  style = {},
+  children,
+}) => {
   const sizeMap = {
-    sm: { fontSize: '1.5rem', lineHeight: '2rem' },
-    md: { fontSize: '2rem', lineHeight: '2.75rem' },
-    lg: { fontSize: '2.75rem', lineHeight: '3.25rem' },
-    xl: { fontSize: '3.5rem', lineHeight: '3.75rem' },
+    sm: 'text-xl leading-7',
+    md: 'text-2xl leading-9',
+    lg: 'text-4xl leading-10',
+    xl: 'text-5xl leading-10',
   }
-  const sizeStyle = sizeMap[size]
+  const sizeClassName = sizeMap[size]
 
   return (
-    <h2 className={`${className}`} style={sizeStyle}>{children}</h2>
+    <h2 className={`text-${color} font-${weight} ${sizeClassName} ${className}`} style={style}>{children}</h2>
   )
 }
 

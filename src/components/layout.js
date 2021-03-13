@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './layout.css'
-import logo from "../images/logo/logo_shelly_white.svg"
+import logo from "../images/logo/logo_shelly_blue.svg"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginLeft: `2rem` }}>
@@ -17,10 +17,10 @@ export default function Layout({
 }) {
   return (
     <div>
-      <div className={`${fullscreen ? '' : 'container px-4'} text-lg subpixel-antialiased`}>
+      <div className={`${fullscreen ? '' : 'container mx-auto px-4'} text-base subpixel-antialiased`}>
         {header && <header className="flex flex-row items-center my-6">
-          <Link to="/" className="flex-none">
-            <img src={logo} alt="Logo" style={{ width: '252px' }} />
+          <Link to="/" className="flex-none mx-4">
+            <img src={logo} alt="Logo" style={{ width: '128px' }} />
           </Link>
 
           <div className="flex-grow">&nbsp;</div>
