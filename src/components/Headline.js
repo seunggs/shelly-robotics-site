@@ -17,7 +17,7 @@ const Headline = ({
   const sizeClassName = sizeMap[size]
 
   return (
-    <h2 className={`${color} ${weight} ${sizeClassName} ${className}`} style={style}>{children}</h2>
+    <h2 className={`text-${color} font-${weight} ${sizeClassName} ${className}`} style={style}>{children}</h2>
   )
 }
 

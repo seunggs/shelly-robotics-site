@@ -7,9 +7,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 export default function Demo() {
-  const getLeftBorderClassName = ({ borderStyle, borderWidth, borderColor }) => `border-${borderStyle} border-l-${borderWidth} border-${borderColor}`
-  const getTextColorClassName = ({ color }) => `text-${color}`
-
   const ImageWrapper = ({
     borderStyle = 'solid',
     borderWidth = 2,
@@ -17,9 +14,8 @@ export default function Demo() {
     caption = '',
     children,
   }) => {
-    const borderClassName = getLeftBorderClassName({ borderStyle, borderWidth, borderColor})
     return (
-      <div className={`${borderClassName} pl-4`}>
+      <div className={`border-${borderStyle} border-l-${borderWidth} border-${borderColor} pl-4`}>
         <div>{children}</div>
         <p className="text-sm italic text-gray-500 mt-3">{caption}</p>
       </div>
@@ -38,13 +34,10 @@ export default function Demo() {
     subtext,
     className = '',
   }) => {
-    const borderClassName = getLeftBorderClassName({ borderStyle, borderWidth, borderColor})
-    const headingColorClassName = getTextColorClassName(headingColor)
-    const textColorClassName = getTextColorClassName(textColor)
     return (
-      <div className={`${borderClassName} ${size === 'sm' ? 'pl-3' : 'pl-6'} ${className}`}>
-        {heading && <div className={`${size === 'sm' ? 'text-md' : 'text-xl'} ${headingColorClassName} ${size === 'sm' ? 'mb-1' : 'mb-2'}`}>{heading}</div>}
-        {text && <div className={`${size === 'sm' ? 'text-lg' : 'text-2xl'} ${textColorClassName}`}>{text}</div>}
+      <div className={`border-${borderStyle} border-l-${borderWidth} border-${borderColor} ${size === 'sm' ? 'pl-3' : 'pl-6'} ${className}`}>
+        {heading && <div className={`${size === 'sm' ? 'text-md' : 'text-xl'} text-${headingColor} ${size === 'sm' ? 'mb-1' : 'mb-2'}`}>{heading}</div>}
+        {text && <div className={`${size === 'sm' ? 'text-lg' : 'text-2xl'} text-${textColor}`}>{text}</div>}
         {subtext && <div className="text-sm text-gray-500 mt-4">{subtext}</div>}
       </div>
     )
