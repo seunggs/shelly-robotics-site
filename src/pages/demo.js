@@ -109,7 +109,7 @@ export default function Demo() {
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Lab2real transfer problem: as soon as the robot is operating in an unstructured real world, it fails</li>
-                          <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to the vagaries of the real world</li>
+                          <li className="mb-3">Our model trains for generalization before specialization which makes it much more robust to the vagaries of the real world (in fact, isn't this how infants learn?)</li>
                           <li className="mb-3">Because of more general capability, 1 robot can now replace ~3 people instead of a fraction of a person</li>
                         </ul>
                         <div className="mt-5">
@@ -336,8 +336,8 @@ export default function Demo() {
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Robots don't work in the real world because it's trained on a highly structured lab environment</li>
-                          <li className="mb-3">Even a seemingly simple task like picking requires a wide range of skills that we humans take for granted</li>
-                          <li className="mb-3">It might seem counterintuitive to train on multiple tasks unrelated to the specific task we want to accomplish, but the latest research suggests this approach makes robots far more robust to the vagaries of the real world</li>
+                          <li className="mb-3">It might seem counterintuitive to train on tasks unrelated to the goal task, but the latest research suggests this approach makes robots far more robust</li>
+                          <li className="mb-3">In fact, isn't this how infants learn? Isn't this how transfer learning works in Computer Vision?</li>
                         </ul>
                       </div>}
                     />
