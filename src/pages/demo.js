@@ -337,7 +337,7 @@ export default function Demo() {
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Robots don't work in the real world because it's trained on a highly structured lab environment</li>
                           <li className="mb-3">It might seem counterintuitive to train on tasks unrelated to the goal task, but the latest research suggests this approach makes robots far more robust</li>
-                          <li className="mb-3">In fact, this is how infants learn 🍼 And this is how transfer learning works</li>
+                          <li className="mb-3">In fact, this is how infants learn 🍼</li>
                         </ul>
                       </div>}
                     />
