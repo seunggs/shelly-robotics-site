@@ -208,7 +208,7 @@ export default function Demo() {
               <div className="md:col-span-4 md:pr-16">
                 <Headline color="blue-800">Demo</Headline>
                 <p className="italic mb-5">***This demo is not real (yet) - we're still building out a working demo with a real robot***</p>
-                <p className="text-2xl text-gray-700 mb-6">“With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% without fundamental algorithmic innovations”</p>
+                <p className="text-2xl text-gray-700 mb-6">“With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without fundamental algorithmic innovations</span>”</p>
               </div>
               <div className="md:col-span-8">
                 <div className="mb-12">
@@ -277,7 +277,7 @@ export default function Demo() {
                     <ul className="list-disc list-outside pl-5 mb-6">
                       <li className="mb-2">The original paper our core model is based on shows ~70% ± 10% success rate over 3 seeded experiments on 18 zero-shot tasks based on <u>just 3 hours of play data</u></li>
                       <li className="mb-2">Crucially, the model shows high robustness to variations in initial conditions - suggesting better lab2real transfer</li>
-                      <li className="mb-2">With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without</span> fundamental algorithmic innovations</li>
+                      <li className="mb-2">With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without fundamental algorithmic innovations</span></li>
                       <li className="mb-2">We plan to test both accuracy and robustness to varying intial conditions by <u>expanding the variety of environments</u> and collecting a <u>considerably larger dataset (~10-20x/env) via crowdsourcing</u></li>
                     </ul>
                   </div>
