@@ -309,7 +309,7 @@ export default function Demo() {
 
               <div className="md:col-span-4 md:pr-16">
                 <Headline color="purple-800">Generalize to many tasks before specializing</Headline>
-                <p className="text-2xl text-gray-700 mt-5 mb-6">“With a more generalized capability, our robot will replace ~3 workers”</p>
+                <p className="text-2xl text-gray-700 mt-5 mb-6">“With a more generalized capability, 1 robot can replace ~3 workers”</p>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
