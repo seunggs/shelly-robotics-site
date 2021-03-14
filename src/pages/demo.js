@@ -321,36 +321,6 @@ export default function Demo() {
                   <div className="md:col-span-5">
                     <TextBlock
                       heading="Currently..."
-                      text="1 robot replaces a fraction of a person"
-                      className="mb-8 md:mb-0 md:mr-8"
-                    />
-                  </div>
-                  <div className="md:col-span-6">
-                    <TextBlock
-                      borderStyle="solid"
-                      borderColor="purple-300"
-                      headingColor="purple-500"
-                      textColor="purple-700"
-                      heading="Our approach"
-                      text="1 robot replaces ~3 people"
-                      subtext={<div>
-                        <ul className="list-disc list-outside pl-5">
-                          <li className="mb-3">Robots can only replace a fraction of a person at the moment because they can only do a very specific task - for example, Kiva bots that move shelves around</li>
-                          <li className="mb-3">With a more generalized capability, our robot will replace a picker entirely</li>
-                          <li className="mb-3">Since a robot can take all 3 full-time shifts in a day, it can replace 3 people</li>
-                        </ul>
-                      </div>}
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-12 mt-12">
-                  <div className="md:col-span-1">
-                    <div className="text-5xl font-semibold text-purple-500 mb-5">2.</div>
-                  </div>
-                  <div className="md:col-span-5">
-                    <TextBlock
-                      heading="Currently..."
                       text="Robots only work in the lab"
                       className="mb-8 md:mb-0 md:mr-8"
                     />
@@ -368,6 +338,36 @@ export default function Demo() {
                           <li className="mb-3">Robots don't work in the real world because it's trained on a highly structured lab environment</li>
                           <li className="mb-3">Even a seemingly simple task like picking requires a wide range of skills that we humans take for granted</li>
                           <li className="mb-3">It might seem counterintuitive to train on multiple tasks unrelated to the specific task we want to accomplish, but the latest research suggests this approach makes robots far more robust to the vagaries of the real world</li>
+                        </ul>
+                      </div>}
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-12 mt-12">
+                  <div className="md:col-span-1">
+                    <div className="text-5xl font-semibold text-purple-500 mb-5">2.</div>
+                  </div>
+                  <div className="md:col-span-5">
+                    <TextBlock
+                      heading="Currently..."
+                      text="1 robot replaces a fraction of a person"
+                      className="mb-8 md:mb-0 md:mr-8"
+                    />
+                  </div>
+                  <div className="md:col-span-6">
+                    <TextBlock
+                      borderStyle="solid"
+                      borderColor="purple-300"
+                      headingColor="purple-500"
+                      textColor="purple-700"
+                      heading="Our approach"
+                      text="1 robot replaces ~3 people"
+                      subtext={<div>
+                        <ul className="list-disc list-outside pl-5">
+                          <li className="mb-3">Robots can only replace a fraction of a person at the moment because they can only do a very specific task - for example, Kiva bots that move shelves around</li>
+                          <li className="mb-3">With a more generalized capability, our robot will replace a picker entirely</li>
+                          <li className="mb-3">Since a robot can take all 3 full-time shifts in a day, it can replace 3 people</li>
                         </ul>
                       </div>}
                     />
