@@ -207,7 +207,8 @@ export default function Demo() {
 
               <div className="md:col-span-4 md:pr-16">
                 <Headline color="blue-800">Demo</Headline>
-                <p className="italic mb-6">*** This demo is not real (yet) - we're still building out a working demo with a real robot</p>
+                <p className="italic mb-5">***This demo is not real (yet) - we're still building out a working demo with a real robot***</p>
+                <p className="text-2xl text-gray-700 mb-6">“With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% without fundamental algorithmic innovations”</p>
               </div>
               <div className="md:col-span-8">
                 <div className="mb-12">
@@ -308,6 +309,7 @@ export default function Demo() {
 
               <div className="md:col-span-4 md:pr-16">
                 <Headline color="purple-800">Generalize to many tasks before specializing</Headline>
+                <p className="text-2xl text-gray-700 mt-5 mb-6">“With a more generalized capability, our robot will replace ~3 workers”</p>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
@@ -386,6 +388,7 @@ export default function Demo() {
 
               <div className="md:col-span-4 md:pr-16">
                 <Headline color="pink-800">Cheap & rich data<br />(scalable)</Headline>
+                <p className="text-2xl text-gray-700 mt-5 mb-6">“Play data is rich and cheap to collect - it allows for much better scalability”</p>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
@@ -463,6 +466,7 @@ export default function Demo() {
 
               <div className="md:col-span-4 md:pr-16">
                 <Headline color="red-800">VR teleoperation</Headline>
+                <p className="text-2xl text-gray-700 mt-5 mb-6">“By using VR teleoperation, we can have a nearly 100% reliable system with much lower model accuracy - humans can handle the difficult edge cases”</p>
               </div>
 
               <div className="md:col-span-8 md:pr-16">
