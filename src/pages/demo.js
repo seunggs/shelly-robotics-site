@@ -69,7 +69,7 @@ export default function Demo() {
 
         {/* What we do */}
         <div className="mx-4 md:mx-12">
-          <div className="container mx-auto">
+          <div className="container mx-auto lg:max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-16 mb-12 p-8 md:p-12">
               <div className="md:col-span-12">
                 <Headline>What We Do</Headline>
@@ -82,7 +82,7 @@ export default function Demo() {
 
         {/* Thesis */}
         <div className="bg-gray-50 mx-4 md:mx-12">
-          <div className="container mx-auto">
+          <div className="container mx-auto lg:max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
               <div className="md:col-span-12">
                 <Headline>Our Thesis</Headline>
@@ -202,7 +202,7 @@ export default function Demo() {
 
         {/* Demo */}
         <div id="demo" className="bg-blue-50 mx-4 md:mx-12">
-          <div className="container mx-auto text-gray-500">
+          <div className="container mx-auto lg:max-w-7xl text-gray-500">
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
@@ -304,7 +304,7 @@ export default function Demo() {
 
         {/* Thesis 1 */}
         <div id="generalization" className="bg-purple-50 mx-4 md:mx-12">
-          <div className="container mx-auto">
+          <div className="container mx-auto lg:max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
@@ -383,7 +383,7 @@ export default function Demo() {
 
         {/* Thesis 2 */}
         <div id="cheap-data" className="bg-pink-50 mx-4 md:mx-12">
-          <div className="container mx-auto">
+          <div className="container mx-auto lg:max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
@@ -461,7 +461,7 @@ export default function Demo() {
 
         {/* Thesis 3 */}
         <div id="teleoperation" className="bg-red-50 mx-4 md:mx-12">
-          <div className="container mx-auto">
+          <div className="container mx-auto lg:max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
@@ -568,7 +568,7 @@ export default function Demo() {
 
         {/* Next steps */}
         <div id="teleoperation" className="bg-gray-50 mx-4 md:mx-12">
-          <div className="container mx-auto">
+          <div className="container mx-auto lg:max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
