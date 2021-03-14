@@ -176,7 +176,7 @@ export default function Demo() {
                       headingColor="pink-500"
                       textColor="pink-700"
                       heading="Our approach 👍"
-                      text="VR teleoperation to handle edge cases"
+                      text="VR teleoperation to handle edge cases - much faster to market"
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Production deployment requires very low error rate</li>
