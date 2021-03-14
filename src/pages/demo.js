@@ -489,7 +489,7 @@ export default function Demo() {
                       headingColor="red-500"
                       textColor="red-700"
                       heading="Our approach"
-                      text="Fast to market: >85% accuracy + teleoperation"
+                      text="Fast to market: >85% accuracy + VR teleoperation"
                       subtext={<div>
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">Clients require a very low error rate for deployment to production</li>
