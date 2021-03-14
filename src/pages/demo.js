@@ -278,7 +278,7 @@ export default function Demo() {
                       <li className="mb-2">The original paper our core model is based on shows ~70% ± 10% success rate over 3 seeded experiments on 18 zero-shot tasks based on <u>just 3 hours of play data</u></li>
                       <li className="mb-2">Crucially, the model shows high robustness to variations in initial conditions - suggesting better lab2real transfer</li>
                       <li className="mb-2">With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without</span> fundamental algorithmic innovations</li>
-                      <li className="mb-2">We plan to test both accuracy and robustness to varying intial conditions by <u>expanding the variety of environments</u> and collecting a <u>considerably larger dataset (~10x) via crowdsourcing</u></li>
+                      <li className="mb-2">We plan to test both accuracy and robustness to varying intial conditions by <u>expanding the variety of environments</u> and collecting a <u>considerably larger dataset (~10-20x/env) via crowdsourcing</u></li>
                     </ul>
                   </div>
 
@@ -289,7 +289,7 @@ export default function Demo() {
                         <div className="mb-2"><input type="checkbox" checked={true} className="mr-2" /><span className="line-through">Build model v1 (PyTorch Lightning)</span></div>
                         <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Test model with a real robot in 1 environment and test baseline accuracy/robustness</span></div>
                         <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Add natural language commands</span></div>
-                        <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Expand to 5 environments and 5x data/env and test improvement in accuracy/robustness</span></div>
+                        <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Expand to 3-5 environments and 10-20x data/env and test improvement in accuracy/robustness</span></div>
                       </form>
                     </div>
                   </div>
