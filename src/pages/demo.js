@@ -590,7 +590,7 @@ export default function Demo() {
                         <ul className="list-disc list-outside pl-5">
                           <li className="mb-3">We're waiting on the delivery of the robot</li>
                           <li className="mb-3">As soon as we get it, we'll be generating play data and testing our model</li>
-                          <li className="mb-3">Once we get a baseline accuracy/robustness, we'll expand environments and dataset size to get to production level performance</li>
+                          <li className="mb-3">Once we get a baseline accuracy/robustness, we'll expand environments and dataset size to get to closer to production level performance</li>
                         </ul>
                       </div>}
                       className="pr-8"
