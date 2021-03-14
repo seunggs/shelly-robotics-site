@@ -73,7 +73,7 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 md:mt-16 mb-12 p-8 md:p-12">
               <div className="md:col-span-12">
                 <Headline>What We Do</Headline>
-                <div className="text-2xl text-gray-500">🤖&nbsp;&nbsp;End-to-end AI robotics for warehouse pick & pack (to begin with!)</div>
+                <div className="text-2xl text-gray-500">🤖&nbsp;&nbsp;AI robotics for warehouse pick & pack (to begin with!)</div>
               </div>
             </div>
           </div>
