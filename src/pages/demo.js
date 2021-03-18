@@ -80,6 +80,108 @@ export default function Demo() {
         </div>
         {/* end: What we do */}
 
+        {/* Demo */}
+        <div id="demo" className="bg-blue-50 mx-4 md:mx-12">
+          <div className="container mx-auto lg:max-w-7xl text-gray-500">
+            <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
+
+              <div className="md:col-span-4 md:pr-16">
+                <Headline color="blue-800">Demo</Headline>
+                <p className="italic mb-5">***This demo is not real (yet) - we're still building out a working demo with a real robot***</p>
+                <p className="text-2xl text-gray-700 mb-6">“With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without fundamental algorithmic innovations</span>”</p>
+              </div>
+              <div className="md:col-span-8">
+                <div className="mb-12">
+                  <Headline size="md">End-to-end AI robotics using VR demonstration data</Headline>
+                  <div className="mb-6">
+                    <div>We're using the open source robot Reachy from Pollen Robotics to collect our data via VR teleoperation.</div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 mt-8 mb-10">
+                    <div className="md:col-span-1">
+                      <TextBlock
+                        size="sm"
+                        borderStyle="solid"
+                        borderColor="blue-300"
+                        headingColor="blue-500"
+                        textColor="blue-700"
+                        heading="Model"
+                        text="Task-agnostic unsupervised architecture"
+                        className="mb-4"
+                      />
+                    </div>
+                    <div className="md:col-span-1">
+                      <TextBlock
+                        size="sm"
+                        borderStyle="solid"
+                        borderColor="blue-300"
+                        headingColor="blue-500"
+                        textColor="blue-700"
+                        heading="Training"
+                        text="End-to-end learning from raw pixels"
+                        className="mb-4"
+                      />
+                    </div>
+                    <div className="md:col-span-1">
+                      <TextBlock
+                        size="sm"
+                        borderStyle="solid"
+                        borderColor="blue-300"
+                        headingColor="blue-500"
+                        textColor="blue-700"
+                        heading="Data"
+                        text="Cheap, unlabelled, non-expert VR demonstration data"
+                        className="mb-4"
+                      />
+                    </div>
+                  </div>
+
+                  <ImageWrapper
+                    borderColor="blue-500"
+                    caption={<div>
+                      *VR demonstration image from <a className="underline" href="https://www.pollen-robotics.com/" target="_blank">Pollen Robotics</a> (open source hardware we're using for data collection)
+                    </div>}
+                  >
+                    <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
+                  </ImageWrapper>
+
+                  {/* <div id="play-data-example" className="mt-12">
+                    <Headline size="md">Example data collection</Headline>
+                    <div className="mb-6">
+                      <div>Show video and states</div>
+                    </div>
+                  </div> */}
+
+                  <div id="research-results" className="mt-12">
+                    <Headline size="md">Research results</Headline>
+                    <ul className="list-disc list-outside pl-5 mb-6">
+                      <li className="mb-2">The original paper our core model is based on shows ~70% ± 10% success rate over 3 seeded experiments on 18 zero-shot tasks based on <u>just 3 hours of play data</u></li>
+                      <li className="mb-2">Crucially, the model shows high robustness to variations in initial conditions - suggesting better lab2real transfer</li>
+                      <li className="mb-2">With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without fundamental algorithmic innovations</span></li>
+                      <li className="mb-2">We plan to test both accuracy and robustness to varying intial conditions by <u>expanding the variety of environments</u> and collecting a <u>considerably larger dataset (~10-20x/env) via crowdsourcing</u></li>
+                    </ul>
+                  </div>
+
+                  <div className="mt-12">
+                    <Headline size="md">Milestones</Headline>
+                    <div className="mb-6">
+                      <form>
+                        <div className="mb-2"><input type="checkbox" checked={true} className="mr-2" /><span className="line-through">Build model v1 (PyTorch Lightning)</span></div>
+                        <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Test model with a real robot in 1 environment and test baseline accuracy/robustness</span></div>
+                        <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Add natural language commands</span></div>
+                        <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Expand to 3-5 environments and 10-20x data/env and test improvement in accuracy/robustness</span></div>
+                      </form>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {/* end: Demo */}
+
         {/* Thesis */}
         <div className="bg-gray-50 mx-4 md:mx-12">
           <div className="container mx-auto lg:max-w-7xl">
@@ -149,7 +251,7 @@ export default function Demo() {
                         <div className="mt-5">
                           <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#cheap-data')}>Learn more &rarr;</a>
                         </div>
-                        <SmImageWrapper to="#play-data-example" playButton={true} className="mt-8">
+                        <SmImageWrapper to="#demo" className="mt-8">
                           <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
                         </SmImageWrapper>
                       </div>}
@@ -186,9 +288,9 @@ export default function Demo() {
                         <div className="mt-5">
                           <a className="cursor-pointer underline hover:text-gray-800 transition-all duration-150" onClick={() => scrollTo('#teleoperation')}>Learn more &rarr;</a>
                         </div>
-                        <SmImageWrapper to="#demo" className="mt-8">
+                        {/* <SmImageWrapper to="#demo" className="mt-8">
                           <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
-                        </SmImageWrapper>
+                        </SmImageWrapper> */}
                       </div>}
                     />
                   </div>
@@ -199,108 +301,6 @@ export default function Demo() {
           </div>
         </div>
         {/* end: Thesis */}
-
-        {/* Demo */}
-        <div id="demo" className="bg-blue-50 mx-4 md:mx-12">
-          <div className="container mx-auto lg:max-w-7xl text-gray-500">
-            <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
-
-              <div className="md:col-span-4 md:pr-16">
-                <Headline color="blue-800">Demo</Headline>
-                <p className="italic mb-5">***This demo is not real (yet) - we're still building out a working demo with a real robot***</p>
-                <p className="text-2xl text-gray-700 mb-6">“With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without fundamental algorithmic innovations</span>”</p>
-              </div>
-              <div className="md:col-span-8">
-                <div className="mb-12">
-                  <Headline size="md">End-to-end AI robotics using VR demonstration data</Headline>
-                  <div className="mb-6">
-                    <div>We're using the open source robot Reachy from Pollen Robotics to collect our data via VR teleoperation.</div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 mt-8 mb-10">
-                    <div className="md:col-span-1">
-                      <TextBlock
-                        size="sm"
-                        borderStyle="solid"
-                        borderColor="blue-300"
-                        headingColor="blue-500"
-                        textColor="blue-700"
-                        heading="Model"
-                        text="Task-agnostic unsupervised architecture"
-                        className="mb-4"
-                      />
-                    </div>
-                    <div className="md:col-span-1">
-                      <TextBlock
-                        size="sm"
-                        borderStyle="solid"
-                        borderColor="blue-300"
-                        headingColor="blue-500"
-                        textColor="blue-700"
-                        heading="Training"
-                        text="End-to-end learning from raw pixels"
-                        className="mb-4"
-                      />
-                    </div>
-                    <div className="md:col-span-1">
-                      <TextBlock
-                        size="sm"
-                        borderStyle="solid"
-                        borderColor="blue-300"
-                        headingColor="blue-500"
-                        textColor="blue-700"
-                        heading="Data"
-                        text="Cheap, unlabelled, non-expert VR demonstration data"
-                        className="mb-4"
-                      />
-                    </div>
-                  </div>
-
-                  <ImageWrapper
-                    borderColor="blue-500"
-                    caption={<div>
-                      *VR demonstration image from <a className="underline" href="https://www.pollen-robotics.com/" target="_blank">Pollen Robotics</a> (open source hardware we're using for data collection)
-                    </div>}
-                  >
-                    <StaticImage src="../images/demo-1.jpg" alt="VR demonstration with a robot" style={{ display: 'block' }} />
-                  </ImageWrapper>
-
-                  <div id="play-data-example" className="mt-12">
-                    <Headline size="md">Example data collection</Headline>
-                    <div className="mb-6">
-                      <div>Show video and states</div>
-                    </div>
-                  </div>
-
-                  <div id="research-results" className="mt-12">
-                    <Headline size="md">Research results</Headline>
-                    <ul className="list-disc list-outside pl-5 mb-6">
-                      <li className="mb-2">The original paper our core model is based on shows ~70% ± 10% success rate over 3 seeded experiments on 18 zero-shot tasks based on <u>just 3 hours of play data</u></li>
-                      <li className="mb-2">Crucially, the model shows high robustness to variations in initial conditions - suggesting better lab2real transfer</li>
-                      <li className="mb-2">With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without fundamental algorithmic innovations</span></li>
-                      <li className="mb-2">We plan to test both accuracy and robustness to varying intial conditions by <u>expanding the variety of environments</u> and collecting a <u>considerably larger dataset (~10-20x/env) via crowdsourcing</u></li>
-                    </ul>
-                  </div>
-
-                  <div className="mt-12">
-                    <Headline size="md">Milestones</Headline>
-                    <div className="mb-6">
-                      <form>
-                        <div className="mb-2"><input type="checkbox" checked={true} className="mr-2" /><span className="line-through">Build model v1 (PyTorch Lightning)</span></div>
-                        <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Test model with a real robot in 1 environment and test baseline accuracy/robustness</span></div>
-                        <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Add natural language commands</span></div>
-                        <div className="mb-2"><input type="checkbox" className="mr-2" /><span>Expand to 3-5 environments and 10-20x data/env and test improvement in accuracy/robustness</span></div>
-                      </form>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        {/* end: Demo */}
 
         {/* Thesis 1 */}
         <div id="generalization" className="bg-purple-50 mx-4 md:mx-12">
