@@ -86,8 +86,8 @@ export default function Demo() {
             <div className="grid grid-cols-1 md:grid-cols-12 mt-12 mb-12 p-8 md:p-12">
 
               <div className="md:col-span-4 md:pr-16">
-                <Headline color="blue-800">Demo</Headline>
-                <p className="italic mb-5">***This demo is not real (yet) - we're still building out a working demo with a real robot***</p>
+                <Headline color="blue-800">Demo (WIP)</Headline>
+                <p className="italic mb-5">***We're still building a demo with a real robot***</p>
                 <p className="text-2xl text-gray-700 mb-6">“With the improvements in our pipeline, we believe that scaling our model and dataset will get us very close to the target accuracy of 85-95% <span className="italic">without fundamental algorithmic innovations</span>”</p>
               </div>
               <div className="md:col-span-8">
