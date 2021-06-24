@@ -15,8 +15,8 @@ export default function Home() {
             </div>
           </Link>
 
-          <Link to="/about">About</Link>
-          <Link to="/demo">Demo</Link>
+          {/* <Link to="/about">About</Link> */}
+          {/* <Link to="/demo">Demo</Link> */}
           {/* <Link to="/blog">Blog</Link> */}
         </div>
 
