@@ -29,7 +29,7 @@ export default function Home() {
 
               <div className="opacity-70">
                 <p className="text-2xl mb-2">We make AI robotics research and experiments easy</p>
-                <p className="text-2xl mb-2">Train and test your model on real robots - minus the hassle</p>
+                <p className="text-2xl mb-2">Train and test your AI model on real robots - minus the hassle.</p>
                 <p className="text-2xl mb-5">(More details coming soon!)</p>
               </div>
             </div>
